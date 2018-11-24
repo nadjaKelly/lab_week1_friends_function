@@ -116,6 +116,8 @@ end
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
   def test_loan_money
+    # @person5 has £100, @person1 has £1
+    # @person5 lends £20 to @person1
     given_money(@person5, @person1, 20)
     assert_equal(@person5[:monies], 80)
     assert_equal(@person1[:monies], 21)
@@ -123,15 +125,9 @@ end
 
 
   # def test_lend_money
-  #     lend_money(@person5, @person1, 20)
-  #
-  #     assert_equal(@person5[:monies], 80)
-  #     assert_equal(@person1[:monies], 21)
-  #   end
+  #       # @person 2 has £2, @person1 has 1
+  #       # @person2 lends £2 to @person1
 
-  # def test_lend_money
-  #     # @person 2 has £2, @person1 has 1
-  #     # @person2 lends £2 to @person1
   #     lend_money(@person2, @person1, 2)
   #     # assert that @person2 has 0 left
   #     assert_equal(0, @person2[:monies])
@@ -141,6 +137,12 @@ end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
+  def test_favorite_food
+    result =  favorite_food_joined(@people)
+    expected = ["charcuterie", "soup", "bread", "Scooby snacks", "spaghetti", "ratatouille", "spinach"]
+    assert_equal(expected, result)
+
+  end
 
 
   # 9. Find people with no friends
