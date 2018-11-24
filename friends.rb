@@ -54,11 +54,7 @@ end
   end
 
   #############################
-
-#   def total_money(people)
-#   total_money = 0
-#   for person in people
-#     total_money += person[:monies]
-#   end
-#   return total_money
-# end
+  def given_money(lender, lendee, amount)
+    lender[:monies] -= amount
+    lendee[:monies] += amount
+  end
