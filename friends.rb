@@ -73,16 +73,6 @@ def favorite_food_joined(group_of_people)
   return array_of_all_food
 end
 
-# def combined_food(people)
-#
-#   all_foods = []
-#   for person in people
-#     for food in person[:favourites][:snacks]
-#       all_foods.push(food)
-#     end
-#   end
-#   return all_foods
-# end
 
 #############################
 # 9
