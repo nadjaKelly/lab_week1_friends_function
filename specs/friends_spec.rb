@@ -110,16 +110,34 @@ end
     assert_equal(143, total_money(@people))
   end
 
-  # def test_total_money
-  #   assert_equal(143, total_money(@people))
-  # end
-
 
 
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
+  def test_loan_money
+    given_money(@person5, @person1, 20)
+    assert_equal(@person5[:monies], 80)
+    assert_equal(@person1[:monies], 21)
+  end
 
+
+  # def test_lend_money
+  #     lend_money(@person5, @person1, 20)
+  #
+  #     assert_equal(@person5[:monies], 80)
+  #     assert_equal(@person1[:monies], 21)
+  #   end
+
+  # def test_lend_money
+  #     # @person 2 has £2, @person1 has 1
+  #     # @person2 lends £2 to @person1
+  #     lend_money(@person2, @person1, 2)
+  #     # assert that @person2 has 0 left
+  #     assert_equal(0, @person2[:monies])
+  #     # assert that @person1 now has £3
+  #     assert_equal(3, @person1[:monies])
+  #   end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
